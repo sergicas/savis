@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AvatarChat - Converses amb Experts</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div id="app">
+        <!-- PANTALLA BENVINGUDA -->
+        <section id="pantallaBenvinguda" class="pantalla active">
+            <div class="welcome-container">
+                <div class="welcome-content">
+                    <h1 class="welcome-title">AvatarChat</h1>
+                    <p class="welcome-subtitle">Converses intel·ligents amb ments brillants.</p>
+                    <p class="welcome-text">Connecta amb experts històrics i moderns gràcies a la intel·ligència
+                        artificial. Aprèn, pregunta i descobreix.</p>
+
+                    <button id="btn-start" class="btn-primary btn-large" onclick="showScreen('selection')">Començar
+                        l'Experiència</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- PANTALLA DE SELECCIÓ -->
+        <section id="selection-screen" class="screen">
+            <header class="main-header">
+                <h2>Escull el teu expert</h2>
+                <p class="subtitle">Tria el teu expert i comença a parlar.</p>
+            </header>
+
+            <!-- Category Filters -->
+            <div class="category-filters" id="category-filters">
+                <button class="category-btn active" data-category="all">Tots</button>
+                <button class="category-btn" data-category="ment">Ment i Esperit</button>
+                <button class="category-btn" data-category="cos">Cos i Salut</button>
+                <button class="category-btn" data-category="saber">Saber i Cultura</button>
+                <button class="category-btn" data-category="feina">Èxit i Feina</button>
+                <button class="category-btn" data-category="vida">Vida Pràctica</button>
+            </div>
+
+            <div class="avatars-grid" id="avatars-grid">
+                <!-- S'omplirà dinàmicament -->
+            </div>
+        </section>
+
+        <!-- PANTALLA DE XAT -->
+        <section id="chat-screen" class="screen">
+            <header class="chat-header">
+                <button id="btn-back" class="btn-icon">←</button>
+                <div class="chat-info">
+                    <div class="chat-avatar-img" id="chat-avatar-img"></div>
+                    <div class="chat-avatar-text">
+                        <h3 id="chat-avatar-name">Nom</h3>
+                        <span id="chat-avatar-role">Rol</span>
+                    </div>
+                </div>
+                <button class="btn-icon">⋮</button>
+            </header>
+
+            <div class="chat-messages" id="chat-messages">
+                <!-- Missatges -->
+            </div>
+
+            <div class="chat-input-container">
+                <input type="text" id="chat-input" placeholder="Escriu un missatge..." autocomplete="off">
+                <button id="btn-send" class="btn-send">
+                    <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="22" y1="2" x2="11" y2="13"></line>
+                        <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                    </svg>
+                </button>
+            </div>
+        </section>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
